@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 list:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -m venv:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(\"/Users/brunolujan/Documents/Projetos Claude Code/Projeto 02 - PDF Extractor/.venv/bin/python3\" -c \"import pdfplumber; print\\(''pdfplumber OK — versão'', pdfplumber.__version__\\)\")"
+    ]
+  }
+}

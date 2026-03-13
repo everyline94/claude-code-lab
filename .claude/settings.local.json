@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod:*)",
+      "Bash(brew install:*)",
+      "Bash(yt-dlp:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -m pip install:*)",
+      "Bash(/Users/brunolujan/Library/Python/3.9/bin/whisper:*)",
+      "Bash(python3:*)",
+      "Bash(AUDIO_FILE=\"/tmp/You probably haven''t unlocked the full design power of your Claude Co....mp3\")",
+      "Bash(OUTPUTS_DIR=\"/Users/brunolujan/Documents/Projetos Claude Code/Projeto 01 - Transcriber/outputs\")",
+      "Bash(__NEW_LINE_61b7b4fe93e014ef__ python3 -m whisper \"$AUDIO_FILE\" --language pt --model base --output_format txt --output_dir \"$OUTPUTS_DIR\")",
+      "Bash(__NEW_LINE_277f0cfd601bf0f1__ python3 -m whisper \"$AUDIO_FILE\" --model small --output_format txt --output_dir \"$OUTPUTS_DIR\")",
+      "Bash(git --version:*)",
+      "Bash(git config:*)",
+      "Bash(gh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

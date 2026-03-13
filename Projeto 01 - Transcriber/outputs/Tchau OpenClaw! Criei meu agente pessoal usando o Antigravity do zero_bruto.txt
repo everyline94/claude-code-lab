@@ -1,0 +1,328 @@
+Imagine um assistente que recebe acesso à sua casa, aos seus armários, aos seus documentos
+e até a forma como você trabalha.
+Se esse assistente é totalmente de terceiros, como o OpenClaw, você ganha até velocidade,
+mas também aceita um problema sério.
+Você não controla completamente quem entra, o que é visto, o que é registrado, o que
+pode vazar.
+Mas e se a gente pudesse criar o nosso próprio agente, um tipo de OpenClaw pessoal sobremedida
+usando o Google Antigravity e construindo tudo do zero?
+Eu vou passar para você hoje uma série de especificações.
+Nós vamos abrir essas specs dentro do antigravity e vamos pedir para ele desenvolver do zero
+o seu agente especial.
+Nós vamos conectar esse seu agente ao telegram, nós vamos adicionar skills, habilitar que
+esse agente receba documentos e que você possa enviar áudio e ele possa te entender
+e responder as solicitações que você fez.
+Isso tudo hoje nesse vídeo, começando do zero, vamos lá.
+Olá, tudo bem?
+Eu sou o Sandeco, eu sou professor e pesquisador em inteligência artificial pelo Instituto Federal
+de Goiás e Universidade Federal de Goiás.
+E se você gosta de inteligência artificial com informações descomplicadas, mas sem
+perder a qualidade técnica e científica, considere se inscrever no meu canal.
+Ative as notificações para ser avisados sempre que eu postar um novo conteúdo e,
+além disso, se você quiser falar comigo diretamente, vem para o nosso grupo de WhatsApp, o link
+está aqui na descrição.
+Ok, hoje nós vamos construir o nosso Open Cloud pessoal, que eu vou chamar de Sunday
+Cloud, tá?
+Mas você pode chamar aí de Pedro Cloud ou João Cloud ou Maria Cloud, o que você quiser,
+tá bom?
+O que é importante entender é o seguinte, eu vou passar uns arquivos de especificação
+para você que são os requisitos de software e aí a gente vai conversando quanto gravity
+e ele vai construir para a gente o nosso Open Cloud pessoal, tá?
+Para você conseguir esses arquivos, vem para o nosso grupo de WhatsApp, basta você clicar
+no link aqui embaixo e esse grupo de WhatsApp pode te ajudar.
+Se você tiver alguma dificuldade, não fica chateado comigo não, nem manda comentário
+nervoso, tá bom?
+Entra no grupo de WhatsApp que a gente pode te ajudar em todos os detalhes, beleza?
+Muito bem, então aqui no Anti-Graph, eu vou fazer o seguinte.
+Eu vou abrir uma pasta chamada Sunday Cloud, aqui no E tem uma pasta chamada Sunday Cloud,
+cadê?
+Tá aqui.
+Então eu vou abrir aqui o Sunday Cloud e dentro desse projeto, vou confiar aqui e tal,
+aí você vai descompactar dentro dessa pasta as specs que eu mandei para você, tá certo?
+As specs que você baixou, então simplesmente o que você vai fazer?
+Você vai ir arrastar as specs que você tem do projeto para dentro do Sunday Cloud aqui,
+tá?
+Então você vai pegar as specs que eu te mandei, que são as especificações do projeto
+e vai descomprimir aqui, né?
+Simplesmente extrair aqui, ele vai criar uma pasta de specs, tá bom?
+Então tá aqui as specs do projeto, tá?
+Então o que você vai fazer?
+Você simplesmente vai arrastar para dentro do Anti-Graph aqui, ó, aí você adiciona,
+você copia o Fold, não adiciona não, tá?
+Copia o Folder aqui e aí, ó, as specs vão estar dentro do projeto do Sunday Cloud, tá?
+O que são essas specs?
+Essas specs, na verdade, por exemplo, se você abrir aqui o documento de requisitos, né,
+o principal documento de requisitos aqui, o PRD, são todas as especificações, tá?
+Do software, olha que legal, tá?
+O Sunday Cloud é um agente pessoal de inteligência artificial para operar 100% local do escritópio
+usuário.
+Ele recebe comandos exclusivamente pelo Telegram, essa que é a ideia, processa-os através de
+um pipeline e suporta múltiplos LLM dinamicamente.
+Então aqui dentro dessa especificação é como se fosse um prompt que está todo especificado
+o como ele deve criar o software e aí o que vai acontecer, na verdade, é que ele vai
+olhar essas especificações que a gente vai passar para ele e eu não preciso escrever
+mais uma vez o prompt do projeto, tá?
+Porque eu já escrevi para você, então você simplesmente vai executar isso no Anti-Gravity,
+tá?
+Isso é muito simples, basta você vir aqui, ó, na conversa com o Anti-Gravity e arrastar
+o PRD para cá, ó.
+Dentro do PRD eu vou colocar aqui o arquivo de arquitetura do projeto, tá?
+Você abre aqui arquitetura, vai ter a linguagem e tudo, banco de dados que vai ser usado,
+você pode depois abrir e ler esse documento, tá?
+Eu vou dizer, ó, que ele vai poder carregar as skills a partir do agent skills, certo?
+Sem reiniciar o processo principal, com baixa latência e tudo mais, então tem diagrama
+de contexto aqui, de como é que deve ser criado todos os projetos, todos os, de como
+deve ser criado todos os módulos dentro do sistema, tá?
+Aí você também vai adicionar aqui esse agent loop aqui, porque é o loop principal
+do agente, tá?
+E os skillser são os documentos base para a gente construir a nossa aplicação do nosso
+sandercloth, tá?
+Então veja, realmente são prômpites que dão comando para ele poder construir.
+E agora eu vou fazer uma coisa diferente aqui, ó.
+Eu vou colocar aqui, né, no Gemini 3.1 Pro High, vou colocar aqui no Plane, tá?
+E vou clicar nesse ícone aqui, ó, esse ícone é legal, porque você pode conversar com
+Anti-Gravity ao invés de você simplesmente digitar.
+Então eu clico aqui e vou dizer o que ele tem que fazer em áudio, tá?
+Vamos lá.
+Ok, Anti-Gravity, agora eu quero que você leia esses quatro documentos que eu tô passando
+pra você e quero que você construa toda a aplicação do sandercloth agora.
+Além disso, se por acaso ele não construir, se por acaso não tiver especificado a pasta
+onde vai ficar as skills, crie também a pasta das skills para mim automaticamente, tá bom?
+Obrigado.
+Terminei aqui.
+Agora eu vou simplesmente enviar esse comando para o Anti-Gravity e ele vai criar todo o
+sistema do sandercloth, beleza?
+É isso, vamos lá.
+Bom, aí como você já sabe, o Anti-Gravity vai começar a pedir uma série de autorizações
+pra você.
+Então você basta clicar aqui, ó, em Run, tá?
+E você vai ver que ele vai criar uma tarefa aqui de instalação do Node, né?
+De instalação de pacotes e tudo mais que são as bases para a criação do projeto, banco
+de dados e tudo mais, tá bom?
+Tudo isso vem nas especificações, ok?
+Então basta clicar aqui em Run, install, que ele vai instalar tudo pra você e deixar
+tudo prontinho.
+Ok, ele terminou a programação, né?
+Porque ele não instalou, pessoal, o que que ele fez?
+Ele desenvolveu pra você esse software.
+Então esse software, ele é seu, eu não criei o software pra você.
+Quem criou o software foi o Anti-Gravity a partir das minhas especificações, a partir
+das minhas specs dos meus prompt de especificação.
+E aí ele fala aqui o seguinte, ó, que toda a estrutura foi criada, certo?
+Ok?
+Foi instalada aí o Node.js, porque a linguagem de programação aqui, né, como eu falei no
+início.
+A gente tá usando aqui o TypeScript, mas lembra, você pode usar qualquer hotel linguagem,
+basta você solicitar no Anti-Gravity que ele refaça ali as specs para o mundo Python,
+por exemplo, para o mundo Java, alguma coisa assim.
+Então ele já diz que instalou aí, criou todas as interfaces orientadas ao objeto,
+quem criou o banco de dados SQLite e tudo mais, já configurou a interface para o Telegram,
+tá?
+E também esse agent loop aqui que vai tomar conta, né, do agente efetivamente, ok?
+E aí ele fala o seguinte, que os próximos passos agora é a gente editar o dotenv pra
+colocar as chaves do Telegram, colocar, né, a chave api, né, do Gemini, de Psyc, e se
+você quiser também, da OpenAI.
+E depois, bom, ele fala que pra executar o ambiente, rodar esse comando, né, NPM Run,
+né, deve, pra verificar, né, se está executando o ambiente.
+Antes disso aqui, eu preciso configurar algumas coisas aqui dentro.
+E agora vamos para o capítulo 2 de configurações do Telegram e configurações das LLMs, vamos
+lá.
+Nós estamos aqui agora no Web Telegram, é mais ou menos parecido com o Web WhatsApp,
+basta você ir lá procurar no seu browser Telegram, Web Telegram, alguma coisa assim,
+ele vai mostrar um QR Code, você lê esse QR Code e acessa, né, exatamente igual o
+WhatsApp.
+Quando você estiver aqui dentro, você vai procurar pelo Botfather, que é esse cara
+aqui, ó, você vai procurar por esse cara aqui, ó, Botfather, certo, muito bem, aqui
+no Botfather que eu vou fazer, eu vou chamar aqui um comando chamado NewBot aqui, ó, cliquei
+aqui em cima, ele vai pedir, qual é o nome desse bot, você vai colocar aqui, ó, Sander
+Claw, ou você coloca seu nome, né, Pedro Claw, José Claw, certo, Maria Claw, coloca
+seu nome, beleza, aí, ó, vem aqui no Sander Claw, doente, e agora vai perguntar, vamos
+criar um username, e então o username vai ser o seguinte, vai ser Sander Claw underscore
+bot, tá, tem que terminar com esse botzinho aí no fim, ok, pessoal, é meio que uma exigência
+dele, clicou aqui, o que ele vai entregar pra mim aqui, né, depois eu vou mudar esse token,
+tá, não se preocupa, é exatamente esse token de acesso aqui, então você vai copiar
+esse token aqui, ó, copiar esse token, tá, e aí você vai voltar aqui no anti gravity,
+abrir aqui o dot envy, tá, e colocar aqui o bot, né, aqui em telegram bot token, você
+vai colar aqui, ó, simplesmente isso, tá, ah, só mais um detalhe, como é que eu consegui
+esse arquivo dot envy, né, eu simplesmente renomeei esse arquivo dot envy ponto exemplo,
+né, cliquei aqui e tirei o exemplo aqui, certo, aí ele fica só dot envy, beleza, então
+veja como é muito simples criar um bot, né, no telegram, então eu vou salvei aqui, é isso,
+uma outra coisa também é que eu vou criar um sistema de segurança muito forte aqui,
+eu vou criar aqui, ó, o telegram allowed user IDs, então o que você tem que fazer? Você
+tem que colocar o seu id do telegram aqui, tá, então como é que você descobre isso? Ok,
+voltando lá no telegram, o que nós temos que fazer é o seguinte, eu vou procurar aqui um
+bot chamado getid, getidbots, tá vendo, uma coisa assim, e aí quando eu vier aqui, ó, o que ele
+vai entregar pra mim é exatamente o meu id aqui, tá vendo? Você não tá vendo porque eu tô borrando
+a imagem, mas você vai copiar esse id aqui, ó, ele vai dar a opção pra você copiar, você
+vai copiar esse id, volta de novo lá no antigravity, e você vai colar esse id aqui,
+e aí o que acontece? A partir de agora, o seu bot só responde mensagens que você mandar e mais
+ninguém, tá certo? E mais ninguém, um outro passo importante aqui é a gente colocar a peiki do
+API, então isso que você já deve saber como fazer, né? Você vai lá no AI Studio, tá, eu vou
+lá no AI Studio agora, aqui no AI Studio, quando você entrar, certo? Você vai vir aqui, ó, em
+getapi e aí você vai aqui criar uma chave nova, e aí você dá criar a chave se não tiver
+projeto, né? Ele cria o projeto também, automaticamente, e aí você basta você pegar a chave,
+de API que assim, ó, copiar a chave, tá? E você colar essa chave lá no projeto do
+sanderclaw, beleza? Você vai colar aqui o seu projeto sanderclaw. Uma outra chave que eu vou
+usar aqui é a chave do deepsick, e você pode usar qualquer outra LLM que você queira, só que
+quando você vai incluir, você tem que dizer pra o antigravity aqui que você quer usar esse LLM,
+olha, eu coloquei a chave aqui do deepsick, e eu quero que você use o deepsick agora como
+padrão de bot pra mim, ou então eu estou usando agora a chave da OpenAI, eu quero que você use,
+né? A OpenAI como padrão pra mim, ok? É isso, então basta fazer fazer isso, colar a sua chave de
+gmi aqui que vai dar tudo certo, tá bom? É isso. Voltando aqui no Telegram, se você olhar a mensagem
+do botfather, você vai ver que ele mandou pra você esse T barrami sanderclaw bot, tá? Então se eu
+clicar aqui, eu vou já poder conversar com o meu botzinho show de bola aqui, certo? Olha só,
+quando você abrir aqui então, basta você clicar aqui em start, e aí você já pode conversar com
+o sanderclaw, então você é oi aqui, né? Ele não vai dizer nada porque ainda não está ativo o
+nosso bot aqui dentro do nosso sistema do sanderclaw, então vamos voltar pra lá pra gente poder rodar
+agora a aplicação efetiva com o nosso sanderclaw aqui dentro do Telegram, beleza? É isso. Na primeira
+execução eu prefiro que você faça dessa forma aqui, ó, dá um cliquezinho no mais aqui, abre
+a conversa e você vai dizer, ah, vai falar com o antigreft e a seguinte coisa. Ok, eu já
+configurei o meu dotenv, né? O pontoenv aqui com todas as informações do Telegram e também do
+Gemini pra rodar aqui no nosso sistema. Eu quero que você agora tente executar o sistema e verifique
+se por acaso vai existir algum tipo de erro, porque se existir algum erro você já vai concertando
+ok? Depois você diz isso, terminou aqui, agora você envia para o antigreft e ele vai fazer a
+execução, a primeira execução ele vai executar e vai verificar se existe algum tipo de erro. Veja,
+até programadores comuns quando vai executar pelas primeiras vezes, né? Dá algum tipo de erro,
+então pode acontecer que tenha algum tipo de erro. Se existir ele já conserta, se não ele já te
+vai executar um relatório que tá tudo certo, ok? Veja aqui que ele entendeu a minha argumentação,
+né? E já vai pedir para rodar o npm run dev que é a execução do TypeScript. Quando eu der rank
+aqui, eu tô habilitando, né? O antigreft é executar meu agente dentro da minha máquina. E aí o que
+que vai acontecer? Ele vai procurar alguns problemas, se tiver algum problema, por exemplo, já deu
+um problema aqui, ele vai já começar a consertar, de acordo com o que eu falei para ele. Nesse caso
+praticamente o que faltou foi instalar algumas bibliotecas aqui, ó, do próprio Node, né? Então
+eu vou pedir para ele executar aqui, ele vai instalar algumas dependências do projeto, tá? Ele vai
+executar também, baseado na tarefa e olhar tudo isso que tá acontecendo de problema, que de repente
+pode estar atrapalhando a execução do nosso Sanderclaw. Então, a partir do momento que ele for
+corrigindo, você vai dando autorização, vai permitindo e ele vai corrigindo toda a aplicação
+dele, certo? Mais uma vez, ele pediu para verificar e vai começar a instalar tudo para você, tá bom?
+Muito bem, ele executou a primeira, né, a solicitação que a gente fez e olha o que que ele disse aqui,
+o sistema foi executado e os seguintes erros foram corrigidos. E aí no final, esse bot Nodeemon,
+certo? Ele conseguiu compilar tudo e conseguiu executar, dando essa saída aqui, ó, Sanderclaw
+iniciando em background, já está aguardando as interações pelo Telegram. Aí o que acontece?
+O que nós vamos fazer agora é nós executarmos o nosso bot aqui. O que que eu vou fazer? Eu vou
+dizer para ele o seguinte, ó. Ok, antigravity, pode terminar a execução, agora eu vou executar no
+meu terminal de controle aqui, tá bom? Muito bem, ele diz agora que cancelou a execução, eu vou
+fazer esse comando aqui, ó, npm run dev, né, e agora eu vou dar aqui um control j ou command
+j, né, você vê no Mac, control j, vai abrir o terminal para mim aqui, eu vou simplesmente colar
+esse comando e dar um enter para ele executar. Então, o que acontece agora é que o nosso Sanderclaw
+está funcionando. Vamos testar isso voltando lá no Telegram e enviando a mensagem, tá ok? Ok,
+eu estou aqui no Sanderclaw, né, no bot aqui, o que eu vou fazer agora é o seguinte, vou mandar
+essa mensagem aqui, ó, Oi Sanderclaw, como vai você? Então a esperança é que ele responda aí
+para a gente como é que ele está, né, agora ele vai usar LLM lá, vai buscar para poder me
+responder o agente. E aí ele respondeu, ó, Oi, estou bem obrigado e você, como posso ajudar hoje?
+Então eu posso perguntar sobre qualquer coisa para ele aqui, entretanto agora ele não tem
+skills ainda, certo? Bom, agora eu vou mostrar para vocês como é que a gente pode habilitar
+esses skills dentro do Sanderclaw no seu casei, certo? Então é simples demais, basta você pegar
+skill que você criou lá no skill creator do Cloud ou no skill creator do Grand Gravity, como eu
+falei no meu último vídeo, eu vou deixar no card aqui em cima e também o link na descrição
+para você ver, você vai pegar a skill, vai trazer a skill para dentro do sistema e ele vai começar
+a responder usando a skill, tá bom? Vamos nessa. Bom, no último vídeo onde eu mostrei o skill
+creator, a gente criou essa skill aqui, legal document explain, certo? Que é um skill que
+você busca explicar documentos legais. Eu vou fazer o seguinte, eu vou simplesmente arrastar essa
+skill para dentro da pasta skills aqui, ó, certo? Então no meu sistema agora, nas minhas skills,
+certo? Aqui, ó, eu vou ter a skill legal document explainer, tá? Abrindo mais uma vez, ele faz
+análises de contratos jurídicos e tudo mais. Qualquer skill que você quiser colocar no seu
+sanderclaw, no seu pedro-claw ou João-claw, sei lá, basta realmente você criar a skill e
+arrastar a skill aqui para dentro. A ideia é que ele carregue essa skill automaticamente e comeste
+a usar a skill para você no telegram. Aí, agora eu vou fazer uma avaliação. O que eu vou fazer aqui,
+ó? Vou vir aqui em specs, tá? Vou abrir aqui, vou abrir o specs e vou colocar aqui o skill user, tá?
+E vou dizer para ele o seguinte aqui, ó. Avalia o skill user mais uma vez porque eu já coloquei uma
+skill dentro da pasta skill, da pasta agent, tá? E eu quero saber que você me confirme se o meu
+agente já está carregando as skills dessa pasta. Caso contrário, aplique esse carregamento, ele
+deve carregar o skill user, deve carregar as skills dessa pasta liberando as skills para que o
+seu sanderclaw possa usar via telegram. E aí, eu vou enviar aqui agora. Olha só, depois disso, o que
+que ele fez? Ele identificou alguns problemas aqui no skill loader, tá? E aí, ele fez um plano de
+correção e aí, ele corrigiu. E agora, ele está dizendo que ele já consegue enxergar esse legal
+document explainer, tá? Então, eu vou executar mais uma vez aqui, vou matar o processo, né? Encontro
+aqui, vou executar mais uma vez aqui o nosso agente, tá bom? E vou voltar lá no telegram. No
+vídeo passado, eu também mostrei para vocês essas políticas de privacidade que os nossos agentes
+fez análise. Aí, eu poderia fazer o seguinte, vim aqui no telegram e colocar aqui, né? Avalie
+as políticas de privacidade abaixo. O problema aqui é o seguinte, é que o agente, ele não está
+sanitado ainda para receber nenhum tipo de arquivo, tá? Nem markdown, nem pdf, nem excel, nem
+áudio, por exemplo. Então, nós vamos voltar no nosso antigravity e vamos fazer o seguinte. Aqui
+dentro, existe no specs o telegram input, tá? No telegram input, está definido lá que eu coloquei,
+ele pode então habilitar o seu usuário a enviar, né? PDFs, tá bom? Mandar enviar PDFs e também
+enviar mensagens de áudio e arquivos também em md, para que os agentes possam ler isso, né? Quando
+eu mandar uma mensagem de áudio, ele vai também fazer uma transcrição com o whisper usando a
+local. Então, esse telegram input, eu vou colocar aqui, então, e vou dizer para ele, ó.
+Olá, antigravity, agora eu quero que você implemente as especificações que estão definidas aqui no
+telegram input. Eu vou poder mandar para ele PDFs, áudios e markdown que ele vai aceitar. Se você
+quiser também fazer com que ele entenda excel, você precisa habilitar isso, né? Falando para ele,
+para que você também habilite a possibilidade do agente receber e ler tabelas em excel e tudo
+mais, beleza? Ok, ele instalou aqui, então, fez um plano de implementação inteiro desse input
+handler, tá? Vou então reiniciar o sistema e agora eu vou mandar, né? Pelo telegram, aquele
+arquivo md, para ver se o sistema vai aceitar. Então, vou enviar aqui e vamos esperar que ele
+tenha esse arquivo. Avalia as políticas de privacidade de acordo com a SQL e dê uma resposta
+interessante, tá bom? Muito bem, depois que eu enviei as políticas de privacidade, igual eu fiz do
+vídeo passado, veja que o telegram agora resolveu me entregar, né? Ele usou lá a SQL e me entregou
+exatamente o resumo da política de privacidade entregando alto risco aí. Da mesma forma como a
+gente lá na sessão 6 e na sessão 11 no vídeo passado, ele também nos entregou da mesma forma
+o problema, entendeu? Então, você veja que está funcionando perfeitamente o nosso sanderclaw que
+usa agentes inteligentes, tá bom? Eu vou fazer mais uma coisa, eu vou enviar um áudio e eu quero que
+ele me responda a esse áudio, né? Ok, vamos lá. Ok, sanderclaw, tudo bem? Eu queria que você mandasse um
+pessoal que está te ouvindo aqui agora, mandasse um abraço para todo mundo. Deu uma falha aqui no
+áudio, né? O que você vai fazer é o seguinte, vai voltar aqui no sanderclaw e você vai dizer
+o seguinte, olha, teve esse erro aqui na hora de processar um áudio, tá? Então, vamos lá, vou
+copiar isso aqui, ó. Vou colocar aqui e vou dizer para ele, ó. Quer ver? Aqui embaixo aqui tem o...
+Oi, anti gravity, olha só, o nosso agente não está recebendo áudio nenhum, não. Tem que consertar
+vamos lá, ele disse que consertou e agora eu vou mandar uma mensagem aqui para ele, ó.
+Olá, agente, eu quero que você mande um abraço para todo mundo que está nos assistindo agora no
+YouTube. Veja que foi enviado, agora vai chegar aqui, o whisper começa a fazer a transcrição,
+é uma ferramenta local, né? Um modelo local que faz a transcrição, não está indo para nenhum
+modelo, ele é em externa, tá? É uma ferramenta local e ele está realizando a transcrição com o
+arquivo temporário, ó, do áudio que está aqui. Depois que ele fizer a transcrição, ele vai remover
+o arquivo temporário, já removeu e agora ele pegou a transcrição aqui, ó. Olá, agente, eu quero que
+você mande um abraço para todo mundo que está nos assistindo agora no YouTube. E aí a resposta
+dele é, uma abração para todo mundo que está nos assistindo agora no YouTube, valeu para estar aqui,
+clica no like, inscreve no canal, tá certo? Compartilha, quer que eu mande uma versão mais
+animada ou curta, né? Então, se você olhar aqui, é exatamente isso aqui. Olá, todo mundo, abração
+para todo mundo aí que está nos assistindo, valeu, deixa o like, se inscreve no canal, então
+deixa o like, se inscreve no canal, se você está gostando do que a gente está fazendo até agora,
+beleza? Então, agora eu vou adicionar uma nova skill, você vai comer simples, né? Vou, que eu coloquei
+anteriormente, agora eu vou adicionar uma nova skill, eu quero que ele seja agora um agente também
+tem a capacidade de me entregar bons títulos para vídeos de YouTube. Olha só como é que eu vou
+fazer. Muito bem, eu tenho uma biblioteca de skills aqui, eu tenho muitas skills que eu criei também
+e peguei algumas, né? Direto também do pessoal da Antropiq, só que tem uma biblioteca, umas
+bibliotecas de skill aqui, que é essa YouTube optimization, tá? Essa aqui, ó. YouTube optimization
+títulos, que eu acho elas boas, tá? Então, elas são ferramentas, certo? Aqui internamente,
+que tem YouTube títulos, né? YouTube tags e tudo mais. Então, quando eu vou criar alguns títulos
+e tags, eu uso essa skill para poder gerar. Então, eu vou fazer o seguinte, vou trazer para cá dentro
+de agentes, eu vou ver aqui, agentes e vou colocar dentro da pasta skills, tá? Não esquece que é
+pasta e skills. Então, agora eu vou ter aqui, vou ter o quê? Agora eu vou ter aqui a skill que
+analisa documentos e a skill que cria títulos para o YouTube, ok? Então, a ideia agora é o seguinte,
+eu quero ver, eu vou matar aqui o processo, vou habilitar mais uma vez, né? O nosso servidor,
+ele vai ler as skills e eu vou perguntar para ele aqui, vou falar para ele criar títulos de
+que ele me entregue, tá bom? Então, vamos nessa, ó, agora aqui no Telegram, eu vou falar para ele aqui
+em áudio mesmo, ó. Olá, gente, eu quero que você crie títulos para o YouTube para mim. Eu pensei no
+título, é, tchau, Open Cloud, criando o meu próprio agente com inteligência artificial e skills.
+Avalia isso para mim, esse título para mim, por favor. Mandei esse para ele, agora vai chegar lá,
+ele vai fazer a transcrição, né? Vai fazer a transcrição do meu áudio, tá? Lembrando que o áudio
+chega aqui no temporários, você vai ver já já o áudio chegando aqui. Olá, gente, eu quero que
+você crie títulos no YouTube para mim. Eu pensei no título, tchau, Open Cloud, né? Criando seu
+próprio agente com inteligência artificial e skills. Vamos ver se ele responde agora? Criando
+os títulos usando a skills, né? Muito bem, agora ele já respondeu aqui, ó, o título original era
+o agente, esse aqui, e a skill pede exatamente isso, né? No passo 1, fazer uma avaliação de
+0 a 10. Olha aqui no skill, ó, você vai abrir aqui, ó. No passo 1, tá? Aqui no passo 1, ó. Análise
+e pontuação. Ele tem que criar uma tabela de pontuação de 0 a 10 do título que eu forneci. Então ele
+traz essas informações aqui dos meus títulos, ó. Ele fez exatamente isso, tá? Depois o que
+ele faz? No passo 2, ele vai sugerir títulos otimizados. Então é que, ó, adeus Open Cloud,
+né? Criei meu próprio agente de A. Nota, 9.6. Criei um agente de A com habilidades próprias,
+9.3. Meu agente de A do 0, sem Open Cloud, né? 9.2. E assim eu posso escolher qual é o melhor
+título para poder colocar no meu vídeo. Você veja, como eu simplesmente inseri a skill, reiniciei
+o agente e o agente já está entendendo essa nova habilidade e ele já começa a usar essa skill.
+Então, olha meu vídeo passado, que é o vídeo de criação de skills, onde você vai poder criar
+suas skills, certo? Usando o What Gravity, aí depois você pega as suas skills, traz para esse
+sistema, né? Para esse agente que a gente criou hoje e aí, cara, o céu é o limite, beleza? Veja
+que chegou corretamente aqui, ó, o áudio que eu enviei e chegou corretamente aqui, a criação
+dos títulos, certo? Que eu pedi. Aqui você pode passar PDF, Excel, áudio, markdown, o que você
+quiser, habilita as suas skills e você começa a trabalhar com o seu agente local aqui, né? Usando
+o Sunday Cloud ou o seu Cloud da vida aí, tá bom? E não é só isso, você pode também habilitar
+as ECPs que conectam com ferramentas externas, como por exemplo, as ferramentas de meio do Google
+ou seu Google Drive ou seu Google Calendar, né? Para você fazer aí agendamento de eventos e
+tudo mais. Então, você pode ir pedindo para o seu Sunday Cloud aí, certo? Que vai transformando
+em habilidades que seu agente pode ter e você comunica com esse agente usando uma interface de
+conversa que é exatamente o Telegram, beleza? Eu vou deixar do lado daqui, esse lado aqui, ó. O
+vídeo que eu falei sobre a criação de skills que você pode assistir para aprender um pouco mais
+skills e depois usar esses skills que você criou aqui dentro desse vídeo, beleza? Eu espero que
+você tenha gostado desse vídeo, não esqueça de deixar o like, não esqueça de deixar seu
+comentário e de compartilhar com o pessoal. Um grande abraço para você e até a próxima.
