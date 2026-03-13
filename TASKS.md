@@ -99,6 +99,19 @@ Projeto 01 - Transcriber/
 
 ---
 
+## Tarefas de publicação no GitHub (Sessão 4)
+
+| #  | Tarefa                                              | Status     |
+|----|-----------------------------------------------------|------------|
+| 26 | git init                                            | concluído  |
+| 27 | Criar .gitignore (outputs, temp, .DS_Store)         | concluído  |
+| 28 | git add + commit inicial                            | concluído  |
+| 29 | gh repo create claude-code-lab --public --push      | concluído  |
+
+> Repositório: https://github.com/everyline94/claude-code-lab
+
+---
+
 ## Histórico de sessões
 
 ### Sessão 1 — 2026-03-12
@@ -111,6 +124,12 @@ Projeto 01 - Transcriber/
 - Modelo atualizado de `base` → `small`; idioma agora detectado automaticamente
 - skill `clean.md` criada com prompt de limpeza
 - Teste completo do fluxo bruto → limpo com vídeo TikTok
+
+### Sessão 4 — 2026-03-13
+- Repositório Git inicializado na pasta do projeto
+- `.gitignore` criado: ignora `outputs/*.txt`, áudios, `.DS_Store`, Python cache
+- Commit inicial com 8 arquivos (todos os arquivos do projeto)
+- Repositório público criado no GitHub: https://github.com/everyline94/claude-code-lab
 
 ### Sessão 3 — 2026-03-12
 - `orchestrator.md` criado: pipeline com 3 sub-agentes (Download, Transcrição, Limpeza)
