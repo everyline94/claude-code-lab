@@ -20,11 +20,13 @@ Projeto 01 - Transcriber/
 ├── skills/
 │   ├── download.md        ← skill: baixar áudio com yt-dlp
 │   ├── transcribe.md      ← skill: transcrever com Whisper
-│   └── clean.md           ← skill: limpar transcrição com Claude
+│   ├── clean.md           ← skill: limpeza com Claude (Modo 1)
+│   └── annotate.md        ← skill: anotações de aula com Claude (Modo 2)
 ├── transcribe.sh          ← script direto para uso no terminal
 └── outputs/
-    ├── <nome>_bruto.txt   ← saída bruta do Whisper
-    └── <nome>_limpo.txt   ← versão limpa pelo Claude
+    ├── <nome>_bruto.txt    ← saída bruta do Whisper
+    ├── <nome>_limpo.txt    ← versão limpa pelo Claude (Modo 1)
+    └── <nome>_anotacoes.md ← anotações em Markdown (Modo 2)
 ```
 
 ---
@@ -112,6 +114,17 @@ Projeto 01 - Transcriber/
 
 ---
 
+## Tarefas do Modo Anotações de Aula (Sessão 5)
+
+| #  | Tarefa                                                        | Status     |
+|----|---------------------------------------------------------------|------------|
+| 30 | Criar skills/annotate.md                                     | concluído  |
+| 31 | Atualizar CLAUDE.md (modos de uso, fluxo, estrutura)         | concluído  |
+| 32 | Atualizar orchestrator.md (Agente 3A/3B, modos de pipeline)  | concluído  |
+| 33 | Atualizar TASKS.md (sessão 5)                                | concluído  |
+
+---
+
 ## Histórico de sessões
 
 ### Sessão 1 — 2026-03-12
@@ -124,6 +137,13 @@ Projeto 01 - Transcriber/
 - Modelo atualizado de `base` → `small`; idioma agora detectado automaticamente
 - skill `clean.md` criada com prompt de limpeza
 - Teste completo do fluxo bruto → limpo com vídeo TikTok
+
+### Sessão 5 — 2026-03-13
+- Novo modo de uso: **Anotações de Aula** (Modo 2)
+- `skills/annotate.md` criada: prompt para gerar Markdown estruturado (título, subtítulos, bullets, takeaways, glossário)
+- `CLAUDE.md` atualizado: seção "Modos de uso" com bifurcação, diagrama de fluxo atualizado, estrutura e convenções
+- `orchestrator.md` atualizado: Agente 3A (Limpeza) e Agente 3B (Anotações), dois pipelines, tabela de reexecução expandida
+- `TASKS.md` atualizado: estrutura do projeto e histórico refletem o novo modo
 
 ### Sessão 4 — 2026-03-13
 - Repositório Git inicializado na pasta do projeto

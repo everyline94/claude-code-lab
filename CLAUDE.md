@@ -26,20 +26,33 @@ chmod +x transcribe.sh        # apenas na primeira vez
 ./transcribe.sh <arquivo.mp3>  # transcrever de arquivo local
 ```
 
-Gera `outputs/<título>_bruto.txt`. Depois aplique `skills/clean.md` no Claude Code para gerar `_limpo.txt`.
+Gera `outputs/<título>_bruto.txt`. Depois aplique a skill do modo desejado no Claude Code.
 
 ### Modo Claude Code (orquestrador)
 
 Use `orchestrator.md` para acionar o pipeline completo com controle por etapa e reexecução granular. Ver instruções em [orchestrator.md](orchestrator.md).
+
+## Modos de uso
+
+Ao receber uma URL para transcrição, o agente deve perguntar ao usuário qual modo deseja:
+
+| Modo | Skill do Agente 3 | Saída | Descrição |
+|------|--------------------|-------|-----------|
+| **(1) Transcrição limpa** | `skills/clean.md` | `_limpo.txt` | Texto corrido, coeso, sem ruído |
+| **(2) Anotações de aula** | `skills/annotate.md` | `_anotacoes.md` | Markdown estruturado com título, subtítulos, bullets, takeaways e glossário |
+
+> Se o usuário não especificar o modo, pergunte antes de executar o Agente 3.
 
 ## Fluxo completo
 
 ```
 URL  →  [Agente 1: download.md]  →  .mp3  →  [Agente 2: transcribe.md]  →  _bruto.txt
                                                                                   ↓
-                                                                    [Agente 3: clean.md]
-                                                                                  ↓
-                                                                            _limpo.txt
+                                                                        ┌─────────┴─────────┐
+                                                                        ↓                   ↓
+                                                             [Agente 3A: clean.md]  [Agente 3B: annotate.md]
+                                                                        ↓                   ↓
+                                                                  _limpo.txt          _anotacoes.md
 ```
 
 ## Estrutura
@@ -52,18 +65,21 @@ Projeto 01 - Transcriber/
 ├── skills/
 │   ├── download.md        ← skill: yt-dlp
 │   ├── transcribe.md      ← skill: whisper
-│   └── clean.md           ← skill: limpeza com Claude
+│   ├── clean.md           ← skill: limpeza com Claude (Modo 1)
+│   └── annotate.md        ← skill: anotações de aula com Claude (Modo 2)
 ├── transcribe.sh          ← script direto para uso no terminal
 └── outputs/               ← transcrições geradas
-    ├── <nome>_bruto.txt   ← saída bruta do Whisper (preservar sempre)
-    └── <nome>_limpo.txt   ← versão limpa pelo Claude
+    ├── <nome>_bruto.txt    ← saída bruta do Whisper (preservar sempre)
+    ├── <nome>_limpo.txt    ← versão limpa pelo Claude (Modo 1)
+    └── <nome>_anotacoes.md ← anotações estruturadas em Markdown (Modo 2)
 ```
 
 ## Convenções
 
 - Áudio temporário salvo em `/tmp/` e removido após a transcrição
 - Bruto sempre preservado em `outputs/<nome>_bruto.txt`
-- Limpo sempre salvo em `outputs/<nome>_limpo.txt`
+- Modo 1: limpo salvo em `outputs/<nome>_limpo.txt`
+- Modo 2: anotações salvas em `outputs/<nome>_anotacoes.md`
 - Idioma: detecção automática (sem `--language`); use `--language pt` ou `--language en` para forçar
 - Modelo Whisper padrão: `small` (melhor precisão, detecta idioma automaticamente)
 
