@@ -1,0 +1,17 @@
+# Inputs e outputs gerados
+inputs/*.txt
+inputs/*.pdf
+outputs/*.md
+
+# PDFs temporários
+*.pdf
+
+# Virtual environment
+.venv/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
