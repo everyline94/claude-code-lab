@@ -32,22 +32,31 @@ Gera `outputs/<título>_bruto.txt`. Depois aplique a skill do modo desejado no C
 
 Use `orchestrator.md` para acionar o pipeline completo com controle por etapa e reexecução granular. Ver instruções em [orchestrator.md](orchestrator.md).
 
+## Comportamento ao receber uma URL
+
+Ao receber uma URL, o agente deve **imediatamente** responder com uma frase curta confirmando a ação antes de iniciar o pipeline. Exemplo:
+
+> Vou baixar o áudio, transcrever e gerar o texto limpo + anotações.
+
+Não pergunte nada — apenas confirme e execute.
+
 ## Modos de uso
 
-Ao receber uma URL para transcrição, o agente deve perguntar ao usuário qual modo deseja:
+O agente deve **sempre executar ambos os modos** automaticamente, sem perguntar:
 
 | Modo | Skill do Agente 3 | Saída | Descrição |
 |------|--------------------|-------|-----------|
 | **(1) Transcrição limpa** | `skills/clean.md` | `_limpo.txt` | Texto corrido, coeso, sem ruído |
 | **(2) Anotações de aula** | `skills/annotate.md` | `_anotacoes.md` | Markdown estruturado com título, subtítulos, bullets, takeaways e glossário |
 
-> Se o usuário não especificar o modo, pergunte antes de executar o Agente 3.
+> **Sempre execute os dois modos (limpo + anotações) após gerar o bruto. Não pergunte ao usuário.**
 
 ## Fluxo completo
 
 ```
 URL  →  [Agente 1: download.md]  →  .mp3  →  [Agente 2: transcribe.md]  →  _bruto.txt
                                                                                   ↓
+                                                                     (sempre executa ambos)
                                                                         ┌─────────┴─────────┐
                                                                         ↓                   ↓
                                                              [Agente 3A: clean.md]  [Agente 3B: annotate.md]

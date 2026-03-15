@@ -4,6 +4,14 @@ Define o pipeline de transcrição como três sub-agentes especializados e indep
 
 ---
 
+## Comportamento ao receber uma URL
+
+Ao receber uma URL, o agente deve **imediatamente** responder com uma frase curta confirmando a ação antes de iniciar o pipeline. Exemplo:
+
+> Vou baixar o áudio, transcrever e gerar o texto limpo + anotações.
+
+Não pergunte nada — apenas confirme e execute.
+
 ## Conceito
 
 Em vez de um único script que faz tudo em sequência, o pipeline é dividido em **agentes autônomos** — cada um responsável por uma etapa, com entradas e saídas bem definidas. O Claude Code orquestra a execução chamando cada agente na ordem certa.
@@ -91,23 +99,20 @@ Salve o resultado em outputs/<título>_anotacoes.md.
 
 ---
 
-## Modos de pipeline
+## Pipeline padrão
 
-| Modo | Agentes | Saída final |
-|------|---------|-------------|
-| **(1) Transcrição limpa** | Agente 1 → 2 → 3A | `_limpo.txt` |
-| **(2) Anotações de aula** | Agente 1 → 2 → 3B | `_anotacoes.md` |
+**Sempre execute ambos os modos** após gerar o bruto — não pergunte ao usuário.
 
-> Se o usuário não especificar o modo, pergunte antes de executar o Agente 3.
+| Pipeline | Agentes | Saídas finais |
+|----------|---------|---------------|
+| **Completo (padrão)** | Agente 1 → 2 → 3A + 3B | `_limpo.txt` + `_anotacoes.md` |
 
 ---
 
 ## Pipeline completo — instrução única
 
-### Modo 1 — Transcrição limpa
-
 ```
-Execute o pipeline de transcrição limpa para <URL>:
+Execute o pipeline completo de transcrição para <URL>:
 
 1. Agente Download: use skills/download.md para baixar o áudio de <URL>
    → confirme o caminho do .mp3 antes de continuar
@@ -118,21 +123,7 @@ Execute o pipeline de transcrição limpa para <URL>:
 3. Agente Limpeza: use skills/clean.md para limpar outputs/<título>_bruto.txt
    → salve o resultado em outputs/<título>_limpo.txt
 
-Se qualquer etapa falhar, pare e informe em qual agente ocorreu o erro.
-```
-
-### Modo 2 — Anotações de aula
-
-```
-Execute o pipeline de anotações de aula para <URL>:
-
-1. Agente Download: use skills/download.md para baixar o áudio de <URL>
-   → confirme o caminho do .mp3 antes de continuar
-
-2. Agente Transcrição: use skills/transcribe.md para transcrever o .mp3
-   → salve em outputs/<título>_bruto.txt e confirme antes de continuar
-
-3. Agente Anotações: use skills/annotate.md para anotar outputs/<título>_bruto.txt
+4. Agente Anotações: use skills/annotate.md para anotar outputs/<título>_bruto.txt
    → salve o resultado em outputs/<título>_anotacoes.md
 
 Se qualquer etapa falhar, pare e informe em qual agente ocorreu o erro.

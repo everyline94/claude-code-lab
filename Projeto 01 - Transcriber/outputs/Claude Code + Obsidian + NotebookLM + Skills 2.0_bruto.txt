@@ -1,0 +1,164 @@
+If Claude code plus notebook LM is amazing and Claude code plus obsidian is free value and Claude
+code plus the brand new skill creator is legitimately game changing then what's going to happen when we
+combine all these tools together in a practical yet simple to set up workflow that you can start
+using today in under 30 minutes. Well that is exactly what we are going to find out in today's
+video is I show you step by step how to create one of the most powerful workflows inside of Claude code.
+This workflow turns Claude code into an absolute research monster and this video is also pretty
+much a capstone of everything we've talked about in the last few videos because we've covered things
+when it comes to Claude code and notebook LM and Claude code and obsidian Claude code and the new
+skills creator but here's where we take all these lessons and we synthesize it into something that
+has practical value and on that note what's important isn't my exact use case right this is a personal
+chase AI use case right and how I do research for my content but you're not a content creator you
+probably have a real job so what I want you to focus on throughout this entire lesson isn't the
+exact intricacies of how I'm doing my YouTube search you should be focused on how do I swap the
+YouTube search for whatever use case I have and whatever source of information I need whether
+that's PDFs or articles or text or whatever right how can we fit in this template into your life
+that's where the value lies and that's what I want you to focus on and it's also something this is
+great at right this is a very flexible workflow that can adapt to your needs and we love that
+so what the heck is this workflow going to be doing well like I said this is research on steroids
+so we are going to be inside of Claude code and we are going to do some research via YouTube right
+my source of data in this case is going to be YouTube videos to do that we will use a specific
+skill from there we are going to send that YouTube data to notebook lm via Claude code
+notebook lm will do analysis on those videos for us notebook lm will also give us any deliverable
+we want whether that's a podcast or a video or an infographic or slide deck and then it passes
+all that back to us inside of Claude code all of this is executed through skills furthermore
+we are going to combine all those subskills into essentially one super skill we will do this using
+the skill creator right so that's where the skill creator comes in and obviously the notebook lm
+stuff will come into play here what about obsidian right because this is good in a vacuum but like
+we kind of want to supercharge this i'm probably not just going to run this workflow one time well
+enter obsidian all this data we analyze and more so than the individual data the way we attack
+the data how we like our analysis done what we want the deliverables to look like how we think
+all of that will be recorded by Claude code in a series of markdown files a series of text files
+that obsidian will be able to take a look at because this is all going to happen in our vault
+now looking at obsidian right here the vault's great right for a couple reasons for me as the
+human being i have great insight into what's going on in my text files i can click through the files
+i can see how they link together and i get cool neat little graphs but more importantly
+insight of Claude code all those markdown files are transparent to Claude code itself it's easier
+when it's set up in this obsidian sort of format for Claude code to find the things it needs further
+more over time we will be able to refine how Claude code speaks to us and thinks in this manner
+via the claude.md file which over time means obsidian helps Claude code do this workflow
+in a manner we want right with obsidian added into this workflow we're able to turn Claude code into
+like this well-trained personal assistant that executes this workflow on our behalf and that's
+super powerful this almost becomes like a self-improving loop right because the more i run the workflow
+the more it gets its analysis in the way i like it the more i talk to Claude code the moral head
+data is recorded and Claude code continues to build and build and build over time this corpus
+of knowledge and evidence for how i like to work and so that's how we get this like awesome symbiotic
+relationship and all these things kind of helping one another by combining Claude code with the
+skill creator with notebook lm with obsidian right and you can see how flexible this is because
+this sort of workflow changes whether you know you know we could take out youtube could be pfs
+right you could even take out the notebook lm piece you could really have any workflow here
+right insert whatever flow but if you keep this template of flow obsidian and improve skills via
+the skill creator you have something super powerful at your fingertips and it's not something a lot of
+people are doing now before we get into how we set this up exactly a word from our sponsor
+yours truly again if you want to learn more about Claude code i just released a Claude
+code masterclass inside of chase ai plus it takes you from zero to essentially ai dev regardless
+of your technical background or lack there of chase ai plus is great if you're serious about ai
+and you're trying to make a career out of this thing so definitely check that out also there is
+a free chase ai community you can find that in the description all the skills we talk about today
+as well as a number of other free resources can be found there so there's something for everybody
+so first thing you got to do is create our skills you will notice i am inside my vault we have to
+be in whatever our vault folder is for obsidian to pick up on this stuff now skill creator skill
+how to install it get it working make sure you check the video above i go in depth but the five
+second version you're just going to do slash plugin you will search for the skill creator tool
+you can see mine is installed right here skill creator install it exit Claude code spin it back
+up you're ready to go and so if i want to build a skill i'm going to do slash skill creator to
+make sure it actually uses the skill and then we're just going to describe it in this case i said i
+wanted to create a skill that searches youtube and returns structured video results it should use
+the yt-dlp to search for videos by query return the results blah blah blah blah this is how it is
+this is how it is from my youtube thing adjust it for what you want as your source again
+these problems will be available inside of my community once you run that it will create the
+skill automatically inside of your dot claude folder it will give you some descriptions about
+what it did with the skill creator tool remember we have the ability to run tests on it as well
+if we want to but we'll skip that for now so that gives me the youtube skill i can now search youtube
+what about the notebook lm side well just like the last two things i have a full video deep dive
+on that check it above but i will give you the 30 second rundown so notebook lm doesn't have a
+public facing api so for us to connect claude code to notebook lm we are going to be using this
+github repo the notebook lm-pi i'll put a link in the description to install it is very easy we're
+just going to run these commands inside of our terminal so we'll just copy this i create a new
+terminal again i am not inside of claude code at this point this is just purely the terminal
+and i will paste them in there and run the install after i run that install i need to log
+in to notebook lm authenticate you see it here in the cli section so i just copy that notebook lm
+space login put it in the terminal hit enter a browser window will pop up asking me to log in
+i log in and that's it you are done and installed and you can now use notebook lm however we need
+to teach claude code how to actually use it that's where the skill comes in now this repo
+gives us a command to do it we can run this notebook lm skill install if we want
+we also have an ability what would probably be better now that we have the skill creator
+would be to like just copy you know essentially this entire github repo or just put a link to it
+give that to claude code and say hey use the skill creator to create a skill for notebook lm-pi
+and you see that prompt right here skill creator create a skill so we can best use the notebook lm
+skill seen here right like this is like one of the best things about claude code is it will
+do things that affect its like own use right like it understands how skills work within its own
+ecosystem and so when i do stuff like this it sort of self improves in a way which is great
+and once you run that you'll get the same message essentially that you saw above when we created
+the youtube search skill and when it comes specifically to the note lm skill these commands
+allow us to do anything and more from the claude code terminal that you could do inside of notebook
+lm normally so we have the ability to create our own notebook we can add as many sources as we like
+well up to 50 it could be from our drive copy text files youtube etc and then like i mentioned
+before we have all the deliverables that notebook lm can give us audio review mind map flashcards
+infographic etc etc so now we have the youtube skill and this graphic has just become hideous right
+let's clean this up so we have the youtube skill we now have the notebook lm setup but again i don't
+want to tell claude code one by one or i do the youtube skill sick thumbs up okay now do the
+do that skill cool thumbs up i want to do this all once i just want to turn it into one skill
+and that's what we'll do now we're turning our workflow into a skill and so to create that youtube
+pipeline that workflow super skill you can see same exact process skill creator and then i just
+did a stream of consciousness for it to create that pretty much saying hey i want this youtube
+pipeline skill i wanted to use a youtube search i wanted to send it to notebook lm and i want
+hey if i ask for some sort of deliverable and i want a brought back right that's what i said
+in way too many words and at that point it will create the skill tell you what it did and then
+ask if you want to run any evals which is up to you and at that point our workflow is essentially
+all set up right skills are ready to go it's inside obsidian now all we have to do is execute it
+so let's do that and in our use case what we will ask for is we will ask for claude code to go
+search up videos that have to do with claude code and mcp i want to find out the top five mcp
+servers so i wanted to go grab the sources and i wanted to do analysis not just what on the top
+five are but how are those videos doing like what is driving views what are some sort of outliers
+what are the gaps and what can we do to capitalize on and i'll also ask for it to take that analysis
+and create an infographic for me and that's the exact prompt you see here i have my youtube
+pipeline skill up and loaded i could have used natural language but anytime you use the slash
+command you know it's going to work a hundred percent like i said youtube mcp claude code analysis
+and i asked for an infographic so you can see it's starting the pipeline calling the sub skills
+with notebook lm as well as white t search and again the great thing about this notebook lm stuff
+is the fact that all this processing by the ai is done by notebook lm like these are tokens
+you're not playing for and claude code doesn't have to use this is all offloaded to google thanks
+google so after six minutes the analysis is complete know that most of the time when you're
+talking about like just like text analysis and you want to know what notebook lm is giving back
+to you that's pretty quick the deliverables can take time so if you're looking for a full slide
+deck for example that can sometimes take up to 15 minutes right because it's several images it needs
+to create if it's just like a one-off like an infographic handful minutes so here's our infographic
+right talking about mcp cool we didn't give it a lot of guidance in terms of the visuals that we
+wanted to see but solid right super base context seven playwright all right breaks it down into
+autonomous coding and the essential vibe coding stack so what did they say super base figma
+sentry post hog context seven playwright can't argue with that and then up top you can see here
+it gave us the full markdown file for the research now remember this is inside obsidian so while this
+seems just like a normal markdown file where stuff is randomly in double brackets it's a much more
+it's much more obvious and easy for us as human beings to see this in context via obsidian here's
+the same document inside of obsidian key takeaways servers it has the back links that will show me
+the other articles it's related to i can see it inside of the graph right cool stuff but that's
+not where the obsidian value ends remember the obsidian value is the fact that i have you can
+see it over here on the left all these markdown files which taken in the aggregate pretty much
+show claud code how it is i work and if we look over here to the claud and defile and that's what
+we see right here the claud md file becomes that brain within a brain right if this vault
+is the second brain of mine where i have all these ideas well the claud that md file is again the
+brain within the brain that tells claud what this all means and what that means in terms of
+conventions of how to talk to me how to give me deliverables how i want things done and so like
+i said over time this vault will grow and grow and grow and grow but it's very easy for claud
+md to grow along with it and again be trained and learn and grow alongside this corpus of knowledge
+and it's as simple as telling claud code hey update claud md based on our latest conversations
+so these conventions are maintained and you're actually doing what i want to do
+and that's as simple as saying can we update claud md so it better reflects my work style
+analysis and output preferences based on our latest conversations right something as broad
+as that is enough for claud to kind of like go nuts with it if you want to be more specific you
+can be more specific right that's the great thing about this is it's very flexible and it's up to
+you and over time that relationship between claud code and obsidian is what it's going to cause it
+to improve its performance right doing that over the course of a week won't have too much of an
+effect doing it over a month definitely well doing it over a year and hundreds and hundreds of
+documents and conversations that will have a huge lasting effect so that is where i'm going to
+leave you guys today i hope you got more out of it than just this workflow in particular and you
+know a little inside view of how i do my sort of content research because again the big sell here
+with this is that we can take all this away right and all's we need is some sort of workflow
+in some manner that helps you right and whatever it is you do and if we can take that workflow and
+turn it into skills and even turn a massive skills into a single skill and plug it into this
+sort of pipeline well then we get the situation where everything is helping each other right
+so and again on the long term tons of value there so let me know in the comments what you
+thought as always if you want to learn more about claud code you want to check out the claud
+code masterclass check out chase ai plus there's a link to that in the comments and as always i'll see
+you around
